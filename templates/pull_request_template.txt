@@ -1,0 +1,19 @@
+##### SUMMARY
+{% if description -%}
+{%- for line in description %}
+{{ line }}
+{%- endfor -%}
+{%- endif %}
+
+##### ISSUE TYPE
+{% if bugfix %}- Bugfix Pull Request{% endif %}
+{% if docs %}- Docs Pull Request{% endif %}
+{% if feature %}- Feature Pull Request{% endif %}
+{% if tests %}- Test Pull Request{% endif -%}
+
+##### COMPONENT NAME
+{%- if files_changed %}
+{% for path in files_changed %}
+{{- path }}
+{% endfor %}
+{% endif %}
