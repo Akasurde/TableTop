@@ -1,0 +1,18 @@
+##### SUMMARY
+{{ SUMMARY }}
+
+##### ISSUE TYPE
+{% if bugfix %}
+- Bugfix Pull Request
+{% elif docs %}
+- Docs Pull Request
+{% elif feature %}
+- Feature Pull Request
+{% elif test %}
+- Test Pull Request
+{% endif %}
+
+##### COMPONENT NAME
+{% if files_changed %}
+{{ files_changed }}
+{% endif %}
